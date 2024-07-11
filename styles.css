@@ -152,6 +152,7 @@ header {
     text-align: center;
     transition: transform 0.9s ease, box-shadow 0.3s ease;
     margin: 30px 10px;
+    max-width: 300px;
 }
 
 .project:hover {
@@ -185,8 +186,35 @@ header {
     margin: 0;
     color: #555;
     text-align: left;
-    margin-left: 25%;
     padding: 10px;
+}
+
+.project-info .paragraf{
+
+    text-align: left;
+    padding-left: 20px;
+
+}
+
+.project-info .button-show-more a{
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #306093;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 15px 15px;
+    text-decoration: none;
+    transition: transform 0.9s ease,box-shadow 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.project-info .button-show-more a:hover {
+    box-shadow: 0 0 10px #306093; /* Adding a glow effect with the specified color */
+    transform: scale(1.03);
 }
 
 /* ------------------------------------------------------ */
