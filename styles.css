@@ -11,7 +11,7 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-size: larger;
+    /* font-size: larger; */
 
 }
 
@@ -58,45 +58,57 @@ header {
     background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white for highlight */
 }
 
+/* ---- END OF HEADER ---- */
 
-.left {
-    width: 50%; /* Adjust width as needed */
-    float: left; /* Float the div to the left */
-    padding: 20px; /* Example padding */
-    box-sizing: border-box; /* Ensures padding is included in width */
+#introduction {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.left img {
+#introduction .left {
+    width: 50%; /* Adjust width as needed */
+    padding: 20px; /* Example padding */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    display: block; /* Visible by default */
+}
+
+#introduction .left img {
     max-width: 50%; /* Ensure the image doesn't exceed the div's width */
     display: block; /* Ensure the image is centered properly */
     margin: 0 auto; /* Center align the image horizontally */
 }
 
-.right {
+#introduction .right {
     width: 50%; /* Adjust width as needed */
-    float: right; /* Float the div to the left */
     padding: 20px; /* Example padding */
     box-sizing: border-box; /* Ensures padding is included in width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
 }
 
-.right p {
+#introduction .right p {
 
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
     color: white;
-    max-width: 500px;
+    /* max-width: 80%; */
+    padding: 5%;
     text-align: center;
 
 }
 
-.right .button-projekti {
+#introduction .right .button-projekti {
 
     text-align: center;
 
 }
 
-.right .button-projekti a {
+#introduction .right .button-projekti a {
     display: inline-block;
     padding: 10px 20px;
     background-color: #306093;
@@ -107,7 +119,7 @@ header {
     transition: transform 0.9s ease,box-shadow 0.3s ease; /* Adding transition for smooth effect */
 }
 
-.right .button-projekti a:hover {
+#introduction .right .button-projekti a:hover {
     box-shadow: 0 0 10px #306093; /* Adding a glow effect with the specified color */
     transform: scale(1.03);
 }
@@ -119,11 +131,12 @@ header {
         justify-content: space-around;
         background-color: #f1f1f1;
         clear: both;
-        margin: -10px;
+        padding: 15px 0;
 }
 
-.recent-projects {
+.recent-projects-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 0px;
     background-color: #f1f1f1;
@@ -131,14 +144,14 @@ header {
     margin: auto;
 }
 
+
 .project {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 19%;
     box-sizing: border-box;
     text-align: center;
     transition: transform 0.9s ease, box-shadow 0.3s ease;
-    margin-bottom: 15px;
+    margin: 30px 10px;
 }
 
 .project:hover {
@@ -149,6 +162,7 @@ header {
 .project img {
     width: 100%; /* Ensure the image fits the container's width */
     height: auto; /* Maintain the aspect ratio */
+    max-width: 300px;
     aspect-ratio: 4 / 5; /* Set the aspect ratio */
     margin-bottom: -5px;
 }
@@ -159,10 +173,12 @@ header {
 
 .project-info h3 {
     margin: 0;
+    padding: 10px 20px;
     font-size: 25px;
     color: white;
     background-color: #a92334;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .project-info p {
@@ -175,7 +191,7 @@ header {
 
 /* ------------------------------------------------------ */
 
-.our-mission {
+#our-mission {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,6 +228,27 @@ footer a:hover {
     border-radius: 50%; /* Optional: Makes the glow effect round */
 }
 
+footer a.fab-right:hover {
+    background-color: #306093; /* Background color change on hover */
+    box-shadow: 0 0 10px #306093; /* Glow effect */
+    border-radius: 50%; /* Optional: Makes the glow effect round */
+}
+
 footer .contact p {
     margin: 5px 0;
+}
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    #introduction .left {
+        display: none; /* Hide on smaller screens */
+    }
+
+    #introduction .right {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center;
+    }
+
+    #navigation-bar li a {
+        padding: 5px;
+    }
 }
