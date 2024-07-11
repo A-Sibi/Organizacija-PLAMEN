@@ -211,8 +211,42 @@ footer {
     clear: both; /* Ensure the footer clears any floated elements */
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     background: rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.contact-us {
+    margin: 20px 0;
+}
+
+.contact-us h2 {
+    margin-bottom: 10px;
+    /* color: #a92334; */
+}
+
+.contact-us p {
+    margin: 5px 0;
+}
+
+.contact-us a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-us a:hover {
+    color: #a92334; /* Hover color for links */
 }
 
 footer a {
@@ -222,13 +256,13 @@ footer a {
     transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-footer a:hover {
+footer .social-media a:hover {
     background-color: #a92334; /* Background color change on hover */
     box-shadow: 0 0 10px #a92334; /* Glow effect */
     border-radius: 50%; /* Optional: Makes the glow effect round */
 }
 
-footer a.fab-right:hover {
+footer .social-media a.fab-right:hover {
     background-color: #306093; /* Background color change on hover */
     box-shadow: 0 0 10px #306093; /* Glow effect */
     border-radius: 50%; /* Optional: Makes the glow effect round */
@@ -237,6 +271,74 @@ footer a.fab-right:hover {
 footer .contact p {
     margin: 5px 0;
 }
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-bottom: 10px;
+    }
+
+    .contact-us {
+        margin: 10px 0;
+    }
+
+    .contact-us h2 {
+        font-size: 1.5rem;
+    }
+}
+
+#under-construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Adjust height as needed */
+    text-align: center;
+    color: white;
+}
+
+#under-construction .content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#under-construction h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#under-construction p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#under-construction .back-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #306093;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding transition for smooth effect */
+}
+
+#under-construction .back-home:hover {
+    box-shadow: 0 0 10px #306093; /* Adding a glow effect with the specified color */
+    transform: scale(1.03);
+}
+
 /* Media query for smaller devices */
 @media (max-width: 768px) {
     #introduction .left {
