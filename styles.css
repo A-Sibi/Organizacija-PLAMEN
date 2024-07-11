@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #306093 50%, #a92334 50%);
+    color: #333;
+}
+
+header {
+    background-color: transparent; /* Set header background to transparent */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: larger;
+
+}
+
+#navigation-bar {
+    background-color: transparent; /* Set navigation bar background to transparent */
+    font-weight: bold;
+}
+
+#navigation-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation-bar li {
+    margin: 0 10px;
+}
+
+#navigation-bar li a {
+    position: relative; /* Ensure the pseudo-element is positioned relative to the link */
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navigation-bar li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Initial background color, will change on hover */
+    transform: scale(0); /* Initially invisible */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for animation */
+}
+
+#navigation-bar li a:hover::after {
+    transform: scale(1); /* Expand to cover the link area */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white for highlight */
+}
+
+
+.left {
+    width: 50%; /* Adjust width as needed */
+    float: left; /* Float the div to the left */
+    padding: 20px; /* Example padding */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.left img {
+    max-width: 50%; /* Ensure the image doesn't exceed the div's width */
+    display: block; /* Ensure the image is centered properly */
+    margin: 0 auto; /* Center align the image horizontally */
+}
+
+.right {
+    width: 50%; /* Adjust width as needed */
+    float: right; /* Float the div to the left */
+    padding: 20px; /* Example padding */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.right p {
+
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: white;
+    max-width: 500px;
+    text-align: center;
+
+}
+
+.right .button-projekti {
+
+    text-align: center;
+
+}
+
+.right .button-projekti a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #306093;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.9s ease,box-shadow 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.right .button-projekti a:hover {
+    box-shadow: 0 0 10px #306093; /* Adding a glow effect with the specified color */
+    transform: scale(1.03);
+}
+
+/* ------------------------------------------------------ */
+
+.RP-Header {
+        display: flex;
+        justify-content: space-around;
+        background-color: #f1f1f1;
+        clear: both;
+        margin: -10px;
+}
+
+.recent-projects {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    background-color: #f1f1f1;
+    clear: both;
+    margin: auto;
+}
+
+.project {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 19%;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.9s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.project:hover {
+    box-shadow: 0 0 10px #a92334; /* Adding a glow effect with the specified color */
+    transform: scale(1.03);
+}
+
+.project img {
+    width: 100%; /* Ensure the image fits the container's width */
+    height: auto; /* Maintain the aspect ratio */
+    aspect-ratio: 4 / 5; /* Set the aspect ratio */
+    margin-bottom: -5px;
+}
+
+.project-info {
+    padding: 0px ;
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    background-color: #a92334;
+    width: 100%;
+}
+
+.project-info p {
+    margin: 0;
+    color: #555;
+    text-align: left;
+    margin-left: 25%;
+    padding: 10px;
+}
+
+/* ------------------------------------------------------ */
+
+.our-mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------ */
+
+footer {
+    clear: both; /* Ensure the footer clears any floated elements */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer a:hover {
+    background-color: #a92334; /* Background color change on hover */
+    box-shadow: 0 0 10px #a92334; /* Glow effect */
+    border-radius: 50%; /* Optional: Makes the glow effect round */
+}
+
+footer .contact p {
+    margin: 5px 0;
+}
